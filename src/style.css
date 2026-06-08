@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9d5d3;
+    color: #ffffff;
+    width: 100%;
+    margin: auto;
+    /* overflow: hidden; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 7rem;
+    padding: 0.5rem;
+}
+
+
+.titlebar {
+    background-color: #fff8f7;
+    border-radius: 10px 10px 0 0;
+    border: 1.5px solid #c97b6e;
+    border-bottom: none;
+    padding: 0.65rem;
+    display: flex;
+    gap: 5px;
+
+}
+
+.ask {
+    max-width: 500px;
+    width: 100%;
+}
+
+.ask > textarea {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    border: 1.5px solid #c97b6e;
+    border-bottom: none;
+    border-top: none;
+    /* border-radius: 14px; */
+    outline: none;
+    background: #fff8f7;
+    overflow: hidden;  
+    font-family: JetBrains Mono, monospace;
+}
+
+.ask > textarea::placeholder {
+    color: #c07a6e;
+}
+
+
+.ask > button {
+    background-color: #fff8f7;
+    border-radius: 0 0 10px 10px;
+    border: 1.5px solid #c97b6e;
+    width: 100%;
+    padding: 0.5rem;
+    transition: background 0s;
+    font-family: JetBrains Mono, monospace;
+    color:#7a3f38;
+    
+}
+.ask > button:hover {
+    cursor: pointer;
+    background-color: #fdecea;
+    letter-spacing: 0.15em; 
+}
+
+.ask > button:active {
+    background-color: #c97b6e;
+    color: #fff8f7;              
+    transition: background 0s;  
+}
+
+.dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  /* border: 1.5px solid #c97b6e; */
+  background: transparent;   /* hollow circles */
+}
+.dot:nth-child(1) { background: #FF5F57; } /* red */
+.dot:nth-child(2) { background: #FEBC2E; } /* yellow */
+.dot:nth-child(3) { background: #28C840; } /* green */
+
+
+.list {
+    overflow: hidden;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 0 0 10px 10px;
+    border: 1.5px solid #c97b6e;
+    border-top: none;
+    border-left: none;
+    border-right: none ;
+
+}
+.list > section{
+    background: #fff8f7;
+    border: 1.5px solid #c97b6e;
+    border-radius: 0 0 10px 10px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 1.5rem;
+    font-family: JetBrains Mono, monospace;
+    height: 50svh;
+    min-height: 200px;
+    overflow-y: auto;
+
+    
+}
+.q {
+    color: #7a3f38;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.a {
+    color: #a85a4e;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+hr {
+    border: 0.5px solid #f2c0bb;
+    margin: 1rem 0;
+}
+
+
+
+
+/* CUSTOM SCROLL BAR */
+.list > section::-webkit-scrollbar { 
+    width: 6px; 
+}
+.list > section::-webkit-scrollbar-track { 
+    background: transparent; 
+}
+.list > section::-webkit-scrollbar-thumb { 
+    background: #e8b8b2; 
+    border-radius: 99px; 
+}
+.list > section::-webkit-scrollbar-thumb:hover { 
+    background: #c97b6e; 
+}
