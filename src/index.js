@@ -5,15 +5,22 @@ const questionTextArea = document.getElementById("question")
 const submitQuestionBtn = document.getElementById("submitQuestionBtn")
 const section = document.getElementById("qaList");
 
-submitQuestionBtn.addEventListener("click", ()=>{
-    saveQuestion(questionTextArea.value)
-    questionTextArea.value = ""
+
+submitQuestionBtn.addEventListener("click", () => {
+
+    if (questionTextArea.value.trim() === "") {
+        console.log("Write something")
+    } else {
+        saveQuestion(questionTextArea.value)
+        questionTextArea.value = ""
+    }
+
 })
 
 async function displayQuestions() {
     const questions = await getQuestions()
     // console.log(questions)
-    
+
     section.innerHTML = "" // clear section
 
     questions.forEach((item, index) => {
